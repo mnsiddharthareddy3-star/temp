@@ -1,29 +1,22 @@
 "use strict";
 
-
 /* ============================================================
    SMARTUI HUB
    REAL TEMPLATE PREVIEW SYSTEM
 
-   IMPORTANT:
-   Every preview uses the actual template's:
+   Every preview uses the actual project structure:
 
-   frontend/templates/
-       category/
-           collection/
-               template/
-                   index.html
-
-   Clicking the preview opens that same index.html.
+   category/
+       collection/
+           template/
+               index.html
 ============================================================ */
-
 
 /* ============================================================
    CATEGORY DATABASE
 ============================================================ */
 
 const CATEGORY_DATA = [
-
   {
     id:"ai",
     title:"AI",
@@ -32,9 +25,7 @@ const CATEGORY_DATA = [
     shade:"#2919a8",
     image:"https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80",
     base:"ai",
-
     collections:[
-
       {
         slug:"ai-chat",
         title:"AI Chat",
@@ -45,7 +36,6 @@ const CATEGORY_DATA = [
           "04-team-ai-chat"
         ]
       },
-
       {
         slug:"ai-assistant",
         title:"AI Assistant",
@@ -56,7 +46,6 @@ const CATEGORY_DATA = [
           "04-smart-ai-assistant"
         ]
       },
-
       {
         slug:"ai-dashboard",
         title:"AI Dashboard",
@@ -67,22 +56,18 @@ const CATEGORY_DATA = [
           "04-enterprise-ai-dashboard"
         ]
       },
-
       {
         slug:"ai-agent-management",
         title:"AI Agent Management",
         templates:[
-          "01-agent-dashboard",
-          "02-agent-builder",
-          "03-agent-monitoring",
-          "04-multi-agent-hub"
+          "01-modern-saas-dashboard",
+          "02-analytics-saas",
+          "03-productivity-saas",
+          "04-enterprise-saas"
         ]
       }
-
     ]
   },
-
-
   {
     id:"saas",
     title:"SaaS",
@@ -91,9 +76,7 @@ const CATEGORY_DATA = [
     shade:"#087e70",
     image:"https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80",
     base:"saas",
-
     collections:[
-
       {
         slug:"saas-dashboard",
         title:"SaaS Dashboard",
@@ -104,7 +87,6 @@ const CATEGORY_DATA = [
           "04-enterprise-saas"
         ]
       },
-
       {
         slug:"saas-admin",
         title:"SaaS Admin",
@@ -115,7 +97,6 @@ const CATEGORY_DATA = [
           "04-saas-control-center"
         ]
       },
-
       {
         slug:"saas-billing",
         title:"SaaS Billing",
@@ -126,7 +107,6 @@ const CATEGORY_DATA = [
           "04-revenue-billing"
         ]
       },
-
       {
         slug:"user-management",
         title:"User Management",
@@ -137,7 +117,6 @@ const CATEGORY_DATA = [
           "04-enterprise-users"
         ]
       },
-
       {
         slug:"team-management",
         title:"Team Management",
@@ -148,7 +127,6 @@ const CATEGORY_DATA = [
           "04-workspace-management"
         ]
       },
-
       {
         slug:"integrations",
         title:"Integrations",
@@ -159,11 +137,8 @@ const CATEGORY_DATA = [
           "04-enterprise-integrations"
         ]
       }
-
     ]
   },
-
-
   {
     id:"swiggy",
     title:"Swiggy",
@@ -172,9 +147,7 @@ const CATEGORY_DATA = [
     shade:"#a6290a",
     image:"https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=80",
     base:"swiggy",
-
     collections:[
-
       {
         slug:"01-food-delivery",
         title:"Food Delivery",
@@ -183,7 +156,6 @@ const CATEGORY_DATA = [
           "02-food-delivery-dashboard"
         ]
       },
-
       {
         slug:"02-restaurant-discovery",
         title:"Restaurant Discovery",
@@ -192,7 +164,6 @@ const CATEGORY_DATA = [
           "02-smart-restaurant-search"
         ]
       },
-
       {
         slug:"03-food-ordering",
         title:"Food Ordering",
@@ -201,7 +172,6 @@ const CATEGORY_DATA = [
           "02-modern-food-cart"
         ]
       },
-
       {
         slug:"04-grocery-delivery",
         title:"Grocery Delivery",
@@ -210,7 +180,6 @@ const CATEGORY_DATA = [
           "02-grocery-shopping"
         ]
       },
-
       {
         slug:"05-food-dashboard",
         title:"Food Dashboard",
@@ -219,11 +188,8 @@ const CATEGORY_DATA = [
           "02-order-management"
         ]
       }
-
     ]
   },
-
-
   {
     id:"where-is-my-train",
     title:"Where Is My Train",
@@ -232,9 +198,7 @@ const CATEGORY_DATA = [
     shade:"#0757a2",
     image:"https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=900&q=80",
     base:"where-is-my-train",
-
     collections:[
-
       {
         slug:"01-train-tracker",
         title:"Train Tracker",
@@ -243,7 +207,6 @@ const CATEGORY_DATA = [
           "02-live-train-tracker"
         ]
       },
-
       {
         slug:"02-train-booking",
         title:"Train Booking",
@@ -252,7 +215,6 @@ const CATEGORY_DATA = [
           "02-modern-ticket-booking"
         ]
       },
-
       {
         slug:"03-live-train-status",
         title:"Live Train Status",
@@ -261,7 +223,6 @@ const CATEGORY_DATA = [
           "02-train-status-board"
         ]
       },
-
       {
         slug:"04-pnr-tracker",
         title:"PNR Tracker",
@@ -270,7 +231,6 @@ const CATEGORY_DATA = [
           "02-pnr-dashboard"
         ]
       },
-
       {
         slug:"05-railway-dashboard",
         title:"Railway Dashboard",
@@ -279,11 +239,8 @@ const CATEGORY_DATA = [
           "02-modern-rail-dashboard"
         ]
       }
-
     ]
   },
-
-
   {
     id:"bookmyshow",
     title:"BookMyShow",
@@ -292,9 +249,7 @@ const CATEGORY_DATA = [
     shade:"#8e112b",
     image:"https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=900&q=80",
     base:"bookmyshow",
-
     collections:[
-
       {
         slug:"01-movie-booking",
         title:"Movie Booking",
@@ -303,7 +258,6 @@ const CATEGORY_DATA = [
           "02-movie-ticket-booking"
         ]
       },
-
       {
         slug:"02-movie-streaming",
         title:"Movie Streaming",
@@ -312,7 +266,6 @@ const CATEGORY_DATA = [
           "02-streaming-home"
         ]
       },
-
       {
         slug:"03-theatre-booking",
         title:"Theatre Booking",
@@ -321,7 +274,6 @@ const CATEGORY_DATA = [
           "02-seat-selection"
         ]
       },
-
       {
         slug:"04-event-booking",
         title:"Event Booking",
@@ -330,7 +282,6 @@ const CATEGORY_DATA = [
           "02-event-discovery"
         ]
       },
-
       {
         slug:"05-entertainment-dashboard",
         title:"Entertainment Dashboard",
@@ -339,11 +290,8 @@ const CATEGORY_DATA = [
           "02-booking-dashboard"
         ]
       }
-
     ]
   },
-
-
   {
     id:"flipkart",
     title:"Flipkart",
@@ -352,9 +300,7 @@ const CATEGORY_DATA = [
     shade:"#073f9b",
     image:"https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=80",
     base:"flipkart",
-
     collections:[
-
       {
         slug:"online-shopping",
         title:"Online Shopping",
@@ -363,7 +309,6 @@ const CATEGORY_DATA = [
           "02-ecommerce-shopping"
         ]
       },
-
       {
         slug:"product-discovery",
         title:"Product Discovery",
@@ -372,7 +317,6 @@ const CATEGORY_DATA = [
           "02-smart-product-search"
         ]
       },
-
       {
         slug:"product-details",
         title:"Product Details",
@@ -381,7 +325,6 @@ const CATEGORY_DATA = [
           "02-modern-product-page"
         ]
       },
-
       {
         slug:"cart-checkout",
         title:"Cart & Checkout",
@@ -390,7 +333,6 @@ const CATEGORY_DATA = [
           "02-modern-checkout"
         ]
       },
-
       {
         slug:"orders-account",
         title:"Orders & Account",
@@ -399,11 +341,8 @@ const CATEGORY_DATA = [
           "02-customer-account"
         ]
       }
-
     ]
   },
-
-
   {
     id:"byjus",
     title:"BYJU'S",
@@ -412,9 +351,7 @@ const CATEGORY_DATA = [
     shade:"#32168f",
     image:"https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=900&q=80",
     base:"byjus",
-
     collections:[
-
       {
         slug:"online-learning",
         title:"Online Learning",
@@ -423,7 +360,6 @@ const CATEGORY_DATA = [
           "02-modern-learning"
         ]
       },
-
       {
         slug:"course-dashboard",
         title:"Course Dashboard",
@@ -432,7 +368,6 @@ const CATEGORY_DATA = [
           "02-student-dashboard"
         ]
       },
-
       {
         slug:"video-learning",
         title:"Video Learning",
@@ -441,7 +376,6 @@ const CATEGORY_DATA = [
           "02-interactive-lessons"
         ]
       },
-
       {
         slug:"tests-assessments",
         title:"Tests & Assessments",
@@ -450,7 +384,6 @@ const CATEGORY_DATA = [
           "02-quiz-assessment"
         ]
       },
-
       {
         slug:"student-progress",
         title:"Student Progress",
@@ -459,11 +392,8 @@ const CATEGORY_DATA = [
           "02-performance-dashboard"
         ]
       }
-
     ]
   },
-
-
   {
     id:"game-app",
     title:"Game App",
@@ -472,9 +402,7 @@ const CATEGORY_DATA = [
     shade:"#67118f",
     image:"https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80",
     base:"game-app",
-
     collections:[
-
       {
         slug:"game-home",
         title:"Game Home",
@@ -483,7 +411,6 @@ const CATEGORY_DATA = [
           "02-game-discovery"
         ]
       },
-
       {
         slug:"game-library",
         title:"Game Library",
@@ -492,7 +419,6 @@ const CATEGORY_DATA = [
           "02-game-browser"
         ]
       },
-
       {
         slug:"player-profile",
         title:"Player Profile",
@@ -501,7 +427,6 @@ const CATEGORY_DATA = [
           "02-gaming-profile"
         ]
       },
-
       {
         slug:"leaderboard",
         title:"Leaderboard",
@@ -510,7 +435,6 @@ const CATEGORY_DATA = [
           "02-player-ranking"
         ]
       },
-
       {
         slug:"game-dashboard",
         title:"Game Dashboard",
@@ -519,11 +443,8 @@ const CATEGORY_DATA = [
           "02-modern-game-dashboard"
         ]
       }
-
     ]
   },
-
-
   {
     id:"portfolio",
     title:"Portfolio",
@@ -532,9 +453,7 @@ const CATEGORY_DATA = [
     shade:"#076f63",
     image:"https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=900&q=80",
     base:"portfolio",
-
     collections:[
-
       {
         slug:"developer-showcase",
         title:"Developer Showcase",
@@ -543,7 +462,6 @@ const CATEGORY_DATA = [
           "02-devfolio-studio"
         ]
       },
-
       {
         slug:"creative-portfolio",
         title:"Creative Portfolio",
@@ -552,7 +470,6 @@ const CATEGORY_DATA = [
           "02-creative-grid"
         ]
       },
-
       {
         slug:"freelancer-portfolio",
         title:"Freelancer Portfolio",
@@ -561,7 +478,6 @@ const CATEGORY_DATA = [
           "02-client-workspace"
         ]
       },
-
       {
         slug:"resume-showcase",
         title:"Resume Showcase",
@@ -570,7 +486,6 @@ const CATEGORY_DATA = [
           "02-resume-timeline"
         ]
       },
-
       {
         slug:"portfolio-cms",
         title:"Portfolio CMS",
@@ -579,11 +494,8 @@ const CATEGORY_DATA = [
           "02-creator-dashboard"
         ]
       }
-
     ]
   },
-
-
   {
     id:"sports",
     title:"Sports",
@@ -592,9 +504,7 @@ const CATEGORY_DATA = [
     shade:"#08784e",
     image:"https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=900&q=80",
     base:"sports",
-
     collections:[
-
       {
         slug:"cricket-live",
         title:"Cricket Live",
@@ -603,7 +513,6 @@ const CATEGORY_DATA = [
           "02-live-score-arena"
         ]
       },
-
       {
         slug:"match-center",
         title:"Match Center",
@@ -612,7 +521,6 @@ const CATEGORY_DATA = [
           "02-ball-by-ball"
         ]
       },
-
       {
         slug:"player-zone",
         title:"Player Zone",
@@ -621,7 +529,6 @@ const CATEGORY_DATA = [
           "02-player-stat-lab"
         ]
       },
-
       {
         slug:"tournaments",
         title:"Tournaments",
@@ -630,7 +537,6 @@ const CATEGORY_DATA = [
           "02-tournament-arena"
         ]
       },
-
       {
         slug:"sports-community",
         title:"Sports Community",
@@ -639,11 +545,8 @@ const CATEGORY_DATA = [
           "02-cricket-social"
         ]
       }
-
     ]
   },
-
-
   {
     id:"airtel-recharge",
     title:"Airtel Recharge",
@@ -652,9 +555,7 @@ const CATEGORY_DATA = [
     shade:"#9d141d",
     image:"https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=80",
     base:"airtel-recharge",
-
     collections:[
-
       {
         slug:"recharge-flow",
         title:"Recharge Flow",
@@ -663,7 +564,6 @@ const CATEGORY_DATA = [
           "02-smart-recharge"
         ]
       },
-
       {
         slug:"plan-explorer",
         title:"Plan Explorer",
@@ -672,7 +572,6 @@ const CATEGORY_DATA = [
           "02-data-plan-lab"
         ]
       },
-
       {
         slug:"payments-bills",
         title:"Payments & Bills",
@@ -681,7 +580,6 @@ const CATEGORY_DATA = [
           "02-payment-pocket"
         ]
       },
-
       {
         slug:"connectivity",
         title:"Connectivity",
@@ -690,7 +588,6 @@ const CATEGORY_DATA = [
           "02-home-connect-hub"
         ]
       },
-
       {
         slug:"telecom-dashboard",
         title:"Telecom Dashboard",
@@ -699,19 +596,15 @@ const CATEGORY_DATA = [
           "02-network-command-center"
         ]
       }
-
     ]
   }
-
 ];
-
 
 /* ============================================================
    HELPERS
 ============================================================ */
 
 function prettyName(value){
-
   return value
     .replace(/^\d+-/,"")
     .replace(/-/g," ")
@@ -724,37 +617,27 @@ function prettyName(value){
     .replace(/\bairtel\b/gi,"Airtel")
     .replace(/\bbookmyshow\b/gi,"BookMyShow")
     .replace(/\b\w/g,char => char.toUpperCase());
-
 }
 
-
 function getTemplateCount(category){
-
   return category.collections.reduce(
     (total,collection) =>
       total + collection.templates.length,
     0
   );
-
 }
-
 
 /* ============================================================
    CREATE ALL TEMPLATE OBJECTS
 ============================================================ */
 
 function buildTemplates(){
-
   const templates = [];
 
   CATEGORY_DATA.forEach(category => {
-
     category.collections.forEach(collection => {
-
       collection.templates.forEach(slug => {
-
         templates.push({
-
           id:
             category.id +
             "-" +
@@ -763,11 +646,8 @@ function buildTemplates(){
             slug,
 
           slug:slug,
-
           title:prettyName(slug),
-
           category:category,
-
           collection:collection,
 
           description:
@@ -780,112 +660,76 @@ function buildTemplates(){
           reviews:
             180 +
             ((templates.length * 73) % 1800)
-
         });
-
       });
-
     });
-
   });
 
   return templates;
-
 }
 
-
-const ALL_TEMPLATES =
-  buildTemplates();
-
+const ALL_TEMPLATES = buildTemplates();
 
 /* ============================================================
    ELEMENTS
 ============================================================ */
 
 const categoryGrid =
-  document.getElementById(
-    "categoryGrid"
-  );
+  document.getElementById("categoryGrid");
 
 const templateGrid =
-  document.getElementById(
-    "templateGrid"
-  );
+  document.getElementById("templateGrid");
 
 const templateHeading =
-  document.getElementById(
-    "templateHeading"
-  );
+  document.getElementById("templateHeading");
 
 const templateDescription =
-  document.getElementById(
-    "templateDescription"
-  );
+  document.getElementById("templateDescription");
 
 const emptyState =
-  document.getElementById(
-    "emptyState"
-  );
+  document.getElementById("emptyState");
 
 const searchInput =
-  document.getElementById(
-    "searchInput"
-  );
+  document.getElementById("searchInput");
 
 const bottomSheet =
-  document.getElementById(
-    "bottomSheet"
-  );
+  document.getElementById("bottomSheet");
 
 const sheetOverlay =
-  document.getElementById(
-    "sheetOverlay"
-  );
+  document.getElementById("sheetOverlay");
 
 const collectionGrid =
-  document.getElementById(
-    "collectionGrid"
-  );
+  document.getElementById("collectionGrid");
 
 const sheetCategory =
-  document.getElementById(
-    "sheetCategory"
-  );
-
+  document.getElementById("sheetCategory");
 
 /* ============================================================
    ACTUAL TEMPLATE PATH
 ============================================================ */
 
 function getTemplatePath(template){
-
+  // Paths are relative to the root index.html.
+  // Example: ai/ai-chat/01-basic-ai-chat/index.html
   return [
-    "frontend",
-    "templates",
     template.category.base,
     template.collection.slug,
     template.slug,
     "index.html"
-  ].join("/");
-
+  ].map(part => encodeURIComponent(part)).join("/");
 }
-
 
 /* ============================================================
    CATEGORY CARDS
 ============================================================ */
 
 function renderCategories(){
-
   categoryGrid.innerHTML = "";
 
   CATEGORY_DATA.forEach(category => {
+    const card = document.createElement("article");
 
-    const card =
-      document.createElement("article");
-
-    card.className =
-      "category-card";
+    card.className = "category-card";
 
     card.style.setProperty(
       "--accent",
@@ -898,15 +742,12 @@ function renderCategories(){
     );
 
     card.innerHTML = `
-
       <div class="category-image">
-
         <img
           src="${category.image}"
           alt="${category.title}"
           loading="lazy"
         >
-
       </div>
 
       <div class="category-logo">
@@ -914,22 +755,14 @@ function renderCategories(){
       </div>
 
       <div class="category-info">
-
-        <h3>
-          ${category.title}
-        </h3>
-
+        <h3>${category.title}</h3>
         <p>
           ${getTemplateCount(category)}
           Templates
         </p>
-
       </div>
 
-      <div class="category-arrow">
-        →
-      </div>
-
+      <div class="category-arrow">→</div>
     `;
 
     card.addEventListener(
@@ -938,30 +771,23 @@ function renderCategories(){
     );
 
     categoryGrid.appendChild(card);
-
   });
-
 }
-
 
 /* ============================================================
    BOTTOM SHEET
 ============================================================ */
 
 function openCategory(category){
-
   sheetCategory.textContent =
     category.title.toUpperCase();
 
   collectionGrid.innerHTML = "";
 
   category.collections.forEach(collection => {
+    const button = document.createElement("button");
 
-    const button =
-      document.createElement("button");
-
-    button.className =
-      "collection";
+    button.className = "collection";
 
     button.style.setProperty(
       "--accent",
@@ -974,79 +800,57 @@ function openCategory(category){
     );
 
     button.innerHTML = `
-
       <div class="collection-icon">
         ${category.icon}
       </div>
 
-      <h3>
-        ${collection.title}
-      </h3>
+      <h3>${collection.title}</h3>
 
       <p>
         ${collection.templates.length}
         templates
       </p>
-
     `;
 
     button.addEventListener(
       "click",
       () => {
-
         closeCategory();
 
         showCollection(
           category,
           collection
         );
-
       }
     );
 
     collectionGrid.appendChild(button);
-
   });
 
-  document.body.classList.add(
-    "sheet-open"
-  );
-
+  document.body.classList.add("sheet-open");
 }
-
 
 function closeCategory(){
-
-  document.body.classList.remove(
-    "sheet-open"
-  );
-
+  document.body.classList.remove("sheet-open");
 }
-
 
 /* ============================================================
    REAL TEMPLATE PREVIEW
 ============================================================ */
 
 function createTemplateCard(template){
+  const card = document.createElement("article");
 
-  const card =
-    document.createElement("article");
+  card.className = "template-card";
 
-  card.className =
-    "template-card";
-
-  const path =
-    getTemplatePath(template);
+  const path = getTemplatePath(template);
 
   card.innerHTML = `
-
     <div
       class="template-preview"
       style="--accent:${template.category.accent}"
       title="Open ${template.title}"
     >
-
       <iframe
         src="${path}"
         title="${template.title} preview"
@@ -1064,17 +868,11 @@ function createTemplateCard(template){
       <span class="preview-open">
         Open Full Template →
       </span>
-
     </div>
 
-
     <div class="template-info">
-
       <div class="template-top">
-
-        <h3>
-          ${template.title}
-        </h3>
+        <h3>${template.title}</h3>
 
         <button
           class="favorite"
@@ -1082,7 +880,6 @@ function createTemplateCard(template){
         >
           ♡
         </button>
-
       </div>
 
       <p class="template-description">
@@ -1090,7 +887,6 @@ function createTemplateCard(template){
       </p>
 
       <div class="template-meta">
-
         <span class="rating">
           ★ ${template.rating}
           (${template.reviews})
@@ -1104,123 +900,86 @@ function createTemplateCard(template){
         >
           Open →
         </a>
-
       </div>
-
     </div>
-
   `;
 
-
   const preview =
-    card.querySelector(
-      ".template-preview"
-    );
+    card.querySelector(".template-preview");
 
   preview.addEventListener(
     "click",
     () => {
-
       window.open(
         path,
         "_blank",
         "noopener"
       );
-
     }
   );
 
-
   const favorite =
-    card.querySelector(
-      ".favorite"
-    );
+    card.querySelector(".favorite");
 
   favorite.addEventListener(
     "click",
     event => {
-
       event.stopPropagation();
 
-      favorite.classList.toggle(
-        "active"
-      );
+      favorite.classList.toggle("active");
 
       favorite.textContent =
-        favorite.classList.contains(
-          "active"
-        )
+        favorite.classList.contains("active")
           ? "♥"
           : "♡";
-
     }
   );
 
-
   const iframe =
-    card.querySelector(
-      "iframe"
-    );
+    card.querySelector("iframe");
 
   iframe.addEventListener(
     "load",
     () => {
-
-      try{
-
+      try {
         const documentBody =
           iframe.contentDocument?.body;
 
-        if(
+        if (
           documentBody &&
           documentBody.innerHTML.trim() === ""
-        ){
-
+        ) {
           showToast(
             `${template.title} has an empty index.html`
           );
-
         }
-
-      }catch(error){
-
+      } catch(error) {
         /*
           Same-origin is expected because
           the template is inside this project.
         */
-
       }
-
     }
   );
 
-
   return card;
-
 }
-
-
 /* ============================================================
    RENDER TEMPLATES
 ============================================================ */
 
 function renderTemplates(list){
-
   templateGrid.innerHTML = "";
 
   emptyState.hidden =
     list.length > 0;
 
   list.forEach(template => {
-
     templateGrid.appendChild(
       createTemplateCard(template)
     );
-
   });
-
 }
-
 
 /* ============================================================
    SHOW COLLECTION
@@ -1230,7 +989,6 @@ function showCollection(
   category,
   collection
 ){
-
   const templates =
     ALL_TEMPLATES.filter(
       template =>
@@ -1244,32 +1002,26 @@ function showCollection(
   templateDescription.textContent =
     `${templates.length} templates in this collection.`;
 
-  renderTemplates(
-    templates
-  );
+  renderTemplates(templates);
 
   document
     .getElementById("templates")
     .scrollIntoView({
       behavior:"smooth"
     });
-
 }
-
 
 /* ============================================================
    SEARCH
 ============================================================ */
 
 function searchTemplates(value){
-
   const query =
     value
       .trim()
       .toLowerCase();
 
   if(!query){
-
     templateHeading.textContent =
       "Popular Templates";
 
@@ -1281,37 +1033,24 @@ function searchTemplates(value){
     );
 
     return;
-
   }
-
 
   const results =
     ALL_TEMPLATES.filter(
       template => {
-
         const searchable = [
-
           template.title,
-
           template.slug,
-
           template.category.title,
-
           template.collection.title,
-
           template.description
-
         ]
           .join(" ")
           .toLowerCase();
 
-        return searchable.includes(
-          query
-        );
-
+        return searchable.includes(query);
       }
     );
-
 
   templateHeading.textContent =
     "Search Results";
@@ -1319,50 +1058,34 @@ function searchTemplates(value){
   templateDescription.textContent =
     `${results.length} templates found for "${value}".`;
 
-  renderTemplates(
-    results
-  );
-
+  renderTemplates(results);
 }
-
 
 document
   .getElementById("searchForm")
   .addEventListener(
     "submit",
     event => {
-
       event.preventDefault();
 
-      searchTemplates(
-        searchInput.value
-      );
+      searchTemplates(searchInput.value);
 
       document
         .getElementById("templates")
         .scrollIntoView({
           behavior:"smooth"
         });
-
     }
   );
-
 
 searchInput.addEventListener(
   "input",
   () => {
-
-    if(
-      searchInput.value.trim() === ""
-    ){
-
+    if(searchInput.value.trim() === ""){
       searchTemplates("");
-
     }
-
   }
 );
-
 
 /* ============================================================
    VIEW ALL TEMPLATES
@@ -1373,20 +1096,15 @@ document
   .addEventListener(
     "click",
     () => {
-
       templateHeading.textContent =
         "All Templates";
 
       templateDescription.textContent =
         `${ALL_TEMPLATES.length} premium templates across 11 categories.`;
 
-      renderTemplates(
-        ALL_TEMPLATES
-      );
-
+      renderTemplates(ALL_TEMPLATES);
     }
   );
-
 
 /* ============================================================
    VIEW CATEGORIES
@@ -1397,16 +1115,13 @@ document
   .addEventListener(
     "click",
     () => {
-
       document
         .getElementById("categories")
         .scrollIntoView({
           behavior:"smooth"
         });
-
     }
   );
-
 
 /* ============================================================
    CLOSE SHEET
@@ -1419,12 +1134,10 @@ document
     closeCategory
   );
 
-
 sheetOverlay.addEventListener(
   "click",
   closeCategory
 );
-
 
 /* ============================================================
    ESCAPE KEY
@@ -1433,18 +1146,11 @@ sheetOverlay.addEventListener(
 document.addEventListener(
   "keydown",
   event => {
-
-    if(
-      event.key === "Escape"
-    ){
-
+    if(event.key === "Escape"){
       closeCategory();
-
     }
-
   }
 );
-
 
 /* ============================================================
    SEARCH ICON
@@ -1455,17 +1161,14 @@ document
   .addEventListener(
     "click",
     () => {
-
       searchInput.focus();
 
       window.scrollTo({
         top:0,
         behavior:"smooth"
       });
-
     }
   );
-
 
 /* ============================================================
    THEME BUTTON
@@ -1476,23 +1179,16 @@ document
   .addEventListener(
     "click",
     () => {
-
-      document.body.classList.toggle(
-        "light-mode"
-      );
+      document.body.classList.toggle("light-mode");
 
       document.getElementById(
         "themeButton"
       ).textContent =
-        document.body.classList.contains(
-          "light-mode"
-        )
+        document.body.classList.contains("light-mode")
           ? "☀"
           : "☾";
-
     }
   );
-
 
 /* ============================================================
    TOAST
@@ -1501,37 +1197,22 @@ document
 let toastTimer;
 
 function showToast(message){
-
   const toast =
-    document.getElementById(
-      "toast"
-    );
+    document.getElementById("toast");
 
-  toast.textContent =
-    message;
+  toast.textContent = message;
 
-  toast.classList.add(
-    "show"
+  toast.classList.add("show");
+
+  clearTimeout(toastTimer);
+
+  toastTimer = setTimeout(
+    () => {
+      toast.classList.remove("show");
+    },
+    2500
   );
-
-  clearTimeout(
-    toastTimer
-  );
-
-  toastTimer =
-    setTimeout(
-      () => {
-
-        toast.classList.remove(
-          "show"
-        );
-
-      },
-      2500
-    );
-
 }
-
 
 /* ============================================================
    INITIALIZE
@@ -1542,7 +1223,6 @@ renderCategories();
 renderTemplates(
   ALL_TEMPLATES.slice(0,12)
 );
-
 
 console.log(
   "SMARTUI HUB loaded:",
